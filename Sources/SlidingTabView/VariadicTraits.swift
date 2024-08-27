@@ -20,6 +20,11 @@ extension View {
 public struct TabInfo: Hashable {
     var icon: String
     var name: String
+
+    public init(icon: String, name: String) {
+        self.icon = icon
+        self.name = name
+    }
 }
 
 public struct TabItemTag: _ViewTraitKey {

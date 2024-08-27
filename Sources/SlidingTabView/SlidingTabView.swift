@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct SlidingTabView<Selection: Hashable, Content: View>: View {
+public struct SlidingTabView<Selection: Hashable, Content: View>: View {
     @Binding var selection: Selection?
     @ViewBuilder var content: Content
 
     @Namespace var capsule
 
-    var body: some View {
+    public var body: some View {
         content.variadic { children in
             let tabInfos = children.compactMap { child in
                 return child[TabItemTag.self]
