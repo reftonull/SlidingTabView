@@ -22,19 +22,19 @@ struct ExampleView: View {
         SlidingTabView(selection: $currentTab) {
             Text("New")
                 .tabTag(Tab.new)
-                .tabInfo(TabInfo(icon: "clock.fill", name: "New"))
+                .tabInfo(TabInfo(name: "New", icon: "clock.fill"))
             Text("Browse")
                 .tabTag(Tab.browse)
-                .tabInfo(TabInfo(icon: "magnifyingglass", name: "Browse"))
+                .tabInfo(TabInfo(name: "Browse", icon: "magnifyingglass"))
             Text("Subscribed")
                 .tabTag(Tab.subscribed)
-                .tabInfo(TabInfo(icon: "square.grid.2x2.fill", name: "Subscribed"))
+                .tabInfo(TabInfo(name: "Subscribed", icon: "square.grid.2x2.fill"))
             Text("Library")
                 .tabTag(Tab.library)
-                .tabInfo(TabInfo(icon: "bookmark.fill", name: "Library"))
+                .tabInfo(TabInfo(name: "Library", icon: "bookmark.fill"))
             Text("Settings")
                 .tabTag(Tab.settings)
-                .tabInfo(TabInfo(icon: "chart.bar.fill", name: "Settings"))
+                .tabInfo(TabInfo(name: "Settings", icon: "chart.bar.fill"))
         }
     }
 }

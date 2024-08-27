@@ -21,7 +21,7 @@ public struct TabInfo: Hashable {
     var icon: String
     var name: String
 
-    public init(icon: String, name: String) {
+    public init(name: String, icon: String) {
         self.icon = icon
         self.name = name
     }
