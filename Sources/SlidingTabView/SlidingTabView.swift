@@ -11,7 +11,12 @@ public struct SlidingTabView<Selection: Hashable, Content: View>: View {
     @Binding var selection: Selection?
     @ViewBuilder var content: Content
 
-    @Namespace var capsule
+    init(selection: Binding<Selection?>, @ViewBuilder content: () -> Content) {
+        self._selection = selection
+        self.content = content()
+    }
+
+    @Namespace private var capsule
 
     public var body: some View {
         content.variadic { children in
