@@ -11,7 +11,7 @@ public struct SlidingTabView<Selection: Hashable, Content: View>: View {
     @Binding var selection: Selection?
     @ViewBuilder var content: Content
 
-    init(selection: Binding<Selection?>, @ViewBuilder content: () -> Content) {
+    public init(selection: Binding<Selection?>, @ViewBuilder content: () -> Content) {
         self._selection = selection
         self.content = content()
     }
